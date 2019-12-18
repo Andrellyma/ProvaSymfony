@@ -1,0 +1,17 @@
+1. Cadastrar professores, alunos e projetos. 10pt   OK
+
+2. Na criação do projeto, é obrigatório vincular um professor como orientador 10pt  OK
+
+3. Inscrever alunos como bolsistas. 10pt    OK
+Retorne o projeto que o aluno está inscrito(lembre-se que se ele já estiver participando de um projeto, não poderá participar de outro). 5pt    OK
+O status da resposta deve refletir se a ação foi bem sucedida ou não. 5pt   OK
+
+4. Encerrar participação de um bolsista. 10pt   OK
+Retorne a lista de projetos que o aluno participou. 10pt X
+
+5. Marcar um projeto como finalizado. 10pt  OK
+
+6. Listar projetos de um professor especificado 10pt.   OK
+Para cada projeto, retorne a lista de bolsistas 10pt.   X
+
+7. Listar projetos, permitindo especificar um filtro de apenas ativos e apenas finalizados 10pt OK

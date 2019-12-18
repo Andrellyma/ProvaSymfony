@@ -1,0 +1,121 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+
+
+# Aluno
+aluno:
+  path: /aluno
+  controller: App\Controller\AlunoController::index
+  methods:
+    - GET
+
+criar_aluno:
+  path: /aluno/inseriraluno
+  controller: App\Controller\AlunoController::criar
+  methods:
+    - POST
+#{
+#  "nome":"Aluno",
+#  "status":false,
+#  "projetos": null
+#}
+
+buscar_aluno:
+  path: /aluno/buscaraluno
+  controller: App\Controller\AlunoController::buscar
+  methods:
+    - GET
+
+
+
+# Professor
+professor:
+  path: /professor
+  controller: App\Controller\ProfessorController::index
+  methods:
+    - GET
+
+criar_professor:
+  path: /professor/inserirprofessor
+  controller: App\Controller\ProfessorController::criar
+  methods:
+    - POST
+#{
+#  "nome":"Professor"
+#}
+
+buscar_professor:
+  path: /professor/buscarprofessor
+  controller: App\Controller\ProfessorController::buscar
+  methods:
+    - GET
+
+vincular_aluno:
+  path: /professor/vincularaluno/{id}
+  controller: App\Controller\ProfessorController::vincularAluno
+  methods:
+    - POST
+#{
+#  "projeto":1
+#}
+
+desvincular_aluno:
+  path: /professor/desvincularaluno/{id}
+  controller: App\Controller\ProfessorController::desvincularAluno
+  methods:
+    - POST
+#{
+#  "projeto":1
+#}
+
+
+
+# Projeto
+projeto:
+  path: /projeto
+  controller: App\Controller\ProjetoController::index
+  methods:
+    - GET
+
+criar_projeto:
+  path: /projeto/inserirprojeto
+  controller: App\Controller\ProjetoController::criar
+  methods:
+    - POST
+#{
+#  "nome":"Projeto",
+#  "status":true,
+#  "professor": 1
+#}
+
+busca_projeto:
+  path: /projeto/buscarprojeto
+  controller: App\Controller\ProjetoController::buscar
+  methods:
+    - GET
+
+buscar_projeto_id:
+  path: /projeto/buscarprojeto/{id}
+  controller: App\Controller\ProjetoController::buscarProjetoId
+  methods:
+    - GET
+
+buscar_projeto_professor:
+  path: /projeto/buscarprojetoprofessor/{id_professor}
+  controller: App\Controller\ProjetoController::buscarProjetoProfessor
+  methods:
+    - GET
+
+finalizar_projeto:
+  path: /projeto/finalizarprojeto/{id}
+  controller: App\Controller\ProjetoController::finalizarProjeto
+  methods:
+    - PUT
+
+filtro_projetos_status:
+  path: /projeto/filtroprojeto/{status}
+  controller: App\Controller\ProjetoController::filtroProjeto
+  methods:
+    - GET
